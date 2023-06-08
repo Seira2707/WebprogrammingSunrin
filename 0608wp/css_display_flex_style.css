@@ -1,0 +1,40 @@
+.container{
+    height: 800px;
+    width: 300px;
+    background-color: aqua;   
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction:column-reverse*/
+    justify-content: center;
+}
+.container .item{
+    border: 1px solid black;
+}
+.container .item:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    
+}
+.container .item:nth-child(2){
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+}
+
+.container .item:nth-child(3){
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+.container .item:nth-child(4){
+    background-color: darkblue;
+    width: 120px;
+    height: 140px;
+}
+
+.container .item:nth-child(5){
+    width: 140px;
+    height: 140px;
+    background-color: darkgreen;
+}
