@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>버튼을 누르면 결과가 출력됩니다.</h1>
+    <h1>추가기획:마우스 올릴시 결과보기</h1>
+    <h1 id="sumtest" style="background-color: turquoise;">합계 출력 영역</h1>
+    <h1 id="strtest" style="background-color: hotpink;">문자 출력 영역</h1>
+    <button onclick="numprint()">합계 출력하기</button>
+    <button onclick="strprint()">문자 출력하기</button>
+    <script>
+        let x = parseInt(prompt("첫번째 더할 수를 입력하세요"));
+        let y = parseInt(prompt("두번째 더할 수를 입력하세요"));
+        let name = prompt("이름을 입력하세요");
+        let z = x + y;
+
+        document.getElementById("sumtest").addEventListener("mouseout", function () {
+            this.innerHTML = "합계 출력 영역";
+            this.style.backgroundColor = "turquoise";
+        });
+        
+        document.getElementById("sumtest").addEventListener("mouseover", function () {
+            this.innerHTML = z;
+            this.style.backgroundColor = "turquoise";
+            this.style.color = "white";
+        });
+
+        document.getElementById("strtest").addEventListener("mouseover", function () {
+            this.innerHTML = "Hello " + name + "!";
+            this.style.backgroundColor = "hotpink";
+        });
+
+
+        document.getElementById("strtest").addEventListener("mouseout", function () {
+            this.innerHTML = "문자 출력 영역";
+            this.style.backgroundColor = "hotpink";
+        });
+
+        function numprint() {
+            document.getElementById("sumtest").innerHTML = z;
+            document.getElementById("sumtest").style.backgroundColor = "turquoise";
+            document.getElementById("sumtest").style.color = "white";
+        }
+
+        function strprint() {
+            document.getElementById("strtest").innerHTML = "Hello " + name + "!";
+            document.getElementById("strtest").style.backgroundColor = "hotpink";
+            document.getElementById("strtest").style.color="white";
+        }
+    </script>
+</body>
+</html>
