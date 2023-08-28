@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="test1"></h1>
+    <h1 id="test2"></h1>
+    <button id="change">테마 적용</button>
+    <script>
+        //let time = new Date().getHours();
+        time=200;
+        let msg;
+        document.getElementById("test1").innerHTML = "time: " + time;
+        if (time < 12) {
+            msg = "Good morning";
+        }
+        else if (time >= 12 && time < 20) {
+            msg = "Good afternoon";
+        }
+        else {
+            msg = "Good night";
+        }
+        document.getElementById("test2").innerHTML = msg;
+
+        document.getElementById("change").addEventListener("click", function() {
+            if (time >= 20) {
+                document.body.style.backgroundColor = "black";
+            }
+        });
+    </script>
+</body>
+</html>
